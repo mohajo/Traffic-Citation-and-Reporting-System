@@ -1,6 +1,13 @@
 Traffic Citation and Reporting System
 The Traffic Citation and Reporting System is a web-based application designed to assist police officers in efficiently creating and managing citations for traffic violations.
 
+System Architecture
+The system is built using a MySQL database, connected to the application through JDBC (Java Database Connectivity). It consists of four main database tables:
+Users
+Citations
+Drivers
+Vehicles
+
 User Roles
 The system supports two types of users:
 
