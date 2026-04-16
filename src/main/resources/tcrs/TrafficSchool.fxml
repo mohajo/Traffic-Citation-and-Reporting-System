@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="480.0" maxWidth="720.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcrs.TrafficSchoolController">
+
+                <Label alignment="TOP_LEFT" text="Traffic School Scheduling">
+      <font>
+         <Font name="Arial Bold" size="22.0" />
+      </font>
+   </Label>
+   <HBox alignment="CENTER" spacing="100.0">
+      <children>
+         <VBox spacing="5.0">
+            <children>
+               <HBox alignment="TOP_RIGHT">
+                  <children>
+                     <VBox prefHeight="306.0" prefWidth="737.0">
+                        <children>
+                           <Label text="Offender's Information">
+                              <font>
+                                 <Font name="Arial" size="16.0" />
+                              </font>
+                              <padding>
+                                 <Insets bottom="10.0" />
+                              </padding>
+                           </Label>
+                           <HBox>
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="First Name">
+                                          <font>
+                                             <Font name="Arial" size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label fx:id="firstNameLabel" prefWidth="275.0" text="firstName">
+                                          <font>
+                                             <Font name="Arial" size="14.0" />
+                                          </font>
+                                          <VBox.margin>
+                                             <Insets bottom="5.0" left="10.0" />
+                                          </VBox.margin>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Last Name">
+                                          <font>
+                                             <Font name="Arial" size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label fx:id="lastNameLabel" prefWidth="275.0" text="lastName">
+                                          <font>
+                                             <Font name="Arial" size="14.0" />
+                                          </font>
+                                          <VBox.margin>
+                                             <Insets bottom="5.0" left="10.0" />
+                                          </VBox.margin>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label prefWidth="280.0" text="Driver's License Number">
+                                          <font>
+                                             <Font name="Arial" size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label fx:id="dLNumberLabel" text="1234-1234-1234-1234">
+                                          <font>
+                                             <Font name="Arial" size="14.0" />
+                                          </font>
+                                          <VBox.margin>
+                                             <Insets bottom="5.0" left="10.0" />
+                                          </VBox.margin>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <Label text="Session Appointment">
+                              <font>
+                                 <Font name="Arial" size="16.0" />
+                              </font>
+                              <VBox.margin>
+                                 <Insets bottom="5.0" top="10.0" />
+                              </VBox.margin>
+                           </Label>
+                           <HBox>
+                              <children>
+                                 <VBox>
+                                    <children>
+                                       <Label text="Session Date">
+                                          <font>
+                                             <Font name="Arial" size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <DatePicker fx:id="sessionDatePicker0" editable="false" prefWidth="243.0">
+                                          <VBox.margin>
+                                             <Insets left="10.0" />
+                                          </VBox.margin>
+                                       </DatePicker>
+                                    </children>
+                                 </VBox>
+                                 <VBox>
+                                    <children>
+                                       <Label text="Session Duration">
+                                          <font>
+                                             <Font name="Arial" size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="sessionDurationTextField0" promptText="0.00">
+                                          <VBox.margin>
+                                             <Insets left="10.0" />
+                                          </VBox.margin>
+                                       </TextField>
+                                       <Label fx:id="sessionErrorLabel0" text="*Input Invalid" textFill="RED">
+                                          <font>
+                                             <Font name="Arial" size="14.0" />
+                                          </font>
+                                          <VBox.margin>
+                                             <Insets left="10.0" />
+                                          </VBox.margin>
+                                       </Label>
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox alignment="BOTTOM_LEFT" spacing="10.0">
+                              <children>
+                                 <HBox fx:id="sessionHBox1">
+                                    <children>
+                                       <VBox>
+                                          <children>
+                                             <Label text="Session Date">
+                                                <font>
+                                                   <Font name="Arial" size="14.0" />
+                                                </font>
+                                             </Label>
+                                             <DatePicker fx:id="sessionDatePicker1" editable="false" prefWidth="243.0">
+                                                <VBox.margin>
+                                                   <Insets left="10.0" />
+                                                </VBox.margin>
+                                             </DatePicker>
+                                          </children>
+                                       </VBox>
+                                       <VBox>
+                                          <children>
+                                             <Label text="Session Duration">
+                                                <font>
+                                                   <Font name="Arial" size="14.0" />
+                                                </font>
+                                             </Label>
+                                             <TextField fx:id="sessionDurationTextField1" promptText="0.00">
+                                                <VBox.margin>
+                                                   <Insets left="10.0" />
+                                                </VBox.margin>
+                                             </TextField>
+                                             <Label fx:id="sessionErrorLabel1" text="*Input Invalid" textFill="RED">
+                                                <font>
+                                                   <Font name="Arial" size="14.0" />
+                                                </font>
+                                                <VBox.margin>
+                                                   <Insets left="10.0" />
+                                                </VBox.margin>
+                                             </Label>
+                                          </children>
+                                          <HBox.margin>
+                                             <Insets left="10.0" />
+                                          </HBox.margin>
+                                       </VBox>
+                                    </children>
+                                 </HBox>
+                                 <Button fx:id="sessionAddButton1" onAction="#handleSessionAddButton1" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #0a3bff;" text="Add" textFill="WHITE">
+                                    <font>
+                                       <Font size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Button>
+                              </children>
+                           </HBox>
+                           <HBox alignment="BOTTOM_LEFT" spacing="10.0">
+                              <children>
+                                 <HBox fx:id="sessionHBox2">
+                                    <children>
+                                       <VBox>
+                                          <children>
+                                             <Label text="Session Date">
+                                                <font>
+                                                   <Font name="Arial" size="14.0" />
+                                                </font>
+                                             </Label>
+                                             <DatePicker fx:id="sessionDatePicker2" editable="false" prefWidth="243.0">
+                                                <VBox.margin>
+                                                   <Insets left="10.0" />
+                                                </VBox.margin>
+                                             </DatePicker>
+                                          </children>
+                                       </VBox>
+                                       <VBox>
+                                          <children>
+                                             <Label text="Session Duration">
+                                                <font>
+                                                   <Font name="Arial" size="14.0" />
+                                                </font>
+                                             </Label>
+                                             <TextField fx:id="sessionDurationTextField2" promptText="0.00">
+                                                <VBox.margin>
+                                                   <Insets left="10.0" />
+                                                </VBox.margin>
+                                             </TextField>
+                                             <Label fx:id="sessionErrorLabel2" text="*Input Invalid" textFill="RED">
+                                                <font>
+                                                   <Font name="Arial" size="14.0" />
+                                                </font>
+                                                <VBox.margin>
+                                                   <Insets left="10.0" />
+                                                </VBox.margin>
+                                             </Label>
+                                          </children>
+                                          <HBox.margin>
+                                             <Insets left="10.0" />
+                                          </HBox.margin>
+                                       </VBox>
+                                    </children>
+                                 </HBox>
+                                 <Button fx:id="sessionAddButton2" onAction="#handleSessionAddButton2" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #0a3bff;" text="Add" textFill="WHITE">
+                                    <font>
+                                       <Font size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Button>
+                              </children>
+                           </HBox>
+                        </children>
+                        <HBox.margin>
+                           <Insets left="10.0" right="10.0" />
+                        </HBox.margin>
+                     </VBox>
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <VBox prefHeight="164.0" prefWidth="1080.0" spacing="10.0">
+      <children>
+         <Label text="Report Notes">
+            <font>
+               <Font name="Arial" size="16.0" />
+            </font>
+         </Label>
+         <TextArea fx:id="reportNotes" prefHeight="200.0" prefWidth="880.0" />
+      </children>
+      <padding>
+         <Insets bottom="10.0" left="100.0" right="100.0" top="10.0" />
+      </padding>
+   </VBox>
+   <HBox alignment="CENTER_RIGHT" spacing="10.0">
+      <children>
+         <Label fx:id="submitErrorLabel" text="*Session duration must meet 8 hour requirement" textFill="RED">
+            <font>
+               <Font name="Arial" size="14.0" />
+            </font>
+         </Label>
+         <Button fx:id="cancelButton" onAction="#handleCancelButton" prefWidth="100.0" style="-fx-background-color: #0a3bff;" text="Cancel" textFill="WHITE">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button fx:id="SubmitButton" onAction="#handleSubmitButton" prefWidth="100.0" style="-fx-background-color: #0a3bff;" text="Submit" textFill="WHITE">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+      </children>
+      <padding>
+         <Insets bottom="10.0" right="100.0" />
+      </padding>
+   </HBox>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+
+</VBox>

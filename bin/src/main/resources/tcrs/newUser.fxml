@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" style="-fx-background-color: f5f5f5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcrs.newUserController">
+   <top>
+      <HBox fillHeight="false" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="290.0" style="-fx-background-color: #3333ff; -fx-font-weight: 700;" text="Traffic and Reporting System" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Helvetica" size="17.0" />
+               </font>
+            </Label>
+            <ButtonBar buttonMinWidth="80.0" prefHeight="40.0" prefWidth="430.0" style="-fx-background-color: #3333ff;">
+              <buttons>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToSettings" prefHeight="40.0" prefWidth="100.0" styleClass="nav-btn-current" stylesheets="@styling.css" text="Settings" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="60.0" text="Admin" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#switchToLogout" prefHeight="38.0" prefWidth="60.0" styleClass="nav-btn-class" stylesheets="@styling.css" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+              </buttons>
+            </ButtonBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="325.0" layoutY="230.0" prefHeight="40.0" prefWidth="410.0" styleClass="welcome-class" stylesheets="@styling.css" text="Create User" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Helvetica" size="17.0" />
+               </font>
+            </Label>
+            <Pane layoutY="42.0" prefHeight="298.0" prefWidth="670.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="42.0">
+               <children>
+                  <Label layoutX="48.0" layoutY="8.0" prefWidth="123.0" text="User Information">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="99.0" />
+                  <Label layoutX="19.0" layoutY="97.0" prefWidth="100.0" text="Account Type">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="218.0" text="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="39.0" prefWidth="100.0" text="Username">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="156.0" text="Account Status">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="23.0" layoutY="60.0" />
+                  <ComboBox fx:id="setAccountType" layoutX="23.0" layoutY="116.0" prefWidth="150.0" promptText="Type" />
+                  <ComboBox fx:id="setAccountStatus" layoutX="22.0" layoutY="177.0" prefWidth="150.0" promptText="Status" />
+                  <TextField fx:id="passwordTextField" layoutX="23.0" layoutY="239.0" />
+                  <Button layoutX="590.0" layoutY="264.0" mnemonicParsing="false" onAction="#createUser" prefWidth="80.0" styleClass="btn-search" stylesheets="@styling.css" text="Create">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

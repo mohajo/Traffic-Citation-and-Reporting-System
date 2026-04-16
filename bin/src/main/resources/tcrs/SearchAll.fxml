@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: f5f5f5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcrs.SearchAllController">
+   <top>
+      <HBox fillHeight="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #3333ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="290.0" style="-fx-background-color: #3333ff; -fx-font-weight: 700;" text="Traffic and Reporting System" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Helvetica" size="17.0" />
+               </font>
+            </Label>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#switchToHome" prefHeight="38.0" prefWidth="100.0" styleClass="nav-btn-class" stylesheets="@styling.css" text="Home">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchToSearch" prefHeight="40.0" prefWidth="100.0" styleClass="nav-btn-current" stylesheets="@styling.css" text="Search" />
+                  <Button mnemonicParsing="false" onAction="#switchToReports" prefHeight="38.0" prefWidth="100.0" styleClass="nav-btn-class" stylesheets="@styling.css" text="Reports" />
+                  <Button mnemonicParsing="false" onAction="#switchToLogout" prefHeight="38.0" prefWidth="60.0" styleClass="nav-btn-class" stylesheets="@styling.css" text="Logout" />
+              </buttons>
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+            </ButtonBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" maxHeight="480.0" maxWidth="720.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="430.0" prefWidth="720.0">
+      
+                      <Label alignment="TOP_LEFT" text="Search">
+            <font>
+               <Font name="Arial Bold" size="22.0" />
+            </font>
+            <padding>
+               <Insets bottom="10.0" top="10.0" />
+            </padding>
+         </Label>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="720.0">
+            <children>
+               <VBox spacing="5.0">
+                  <children>
+                     <Label text="Search by Citation ID">
+                        <font>
+                           <Font name="Arial" size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="citationIDTextField" prefWidth="380.0" promptText="12345678">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets left="10.0" />
+                        </VBox.margin>
+                     </TextField>
+                     <HBox prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="citationIDErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                              <font>
+                                 <Font name="Arial" size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets bottom="5.0" />
+                              </padding>
+                              <HBox.margin>
+                                 <Insets left="10.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button fx:id="citationIDSearch" onAction="#handleCitaionIDSearchButton" prefWidth="100.0" styleClass="btn-search" stylesheets="@styling.css" text="Search" textFill="WHITE">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                        </children>
+                     </HBox>
+                     <Label text="Search by Driver's License #">
+                        <font>
+                           <Font name="Arial" size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="driverLicenseNumberTextField" promptText="1234-1234-1234-1234">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets left="10.0" />
+                        </VBox.margin>
+                     </TextField>
+                     <HBox prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="driverLicenseNumberErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                              <font>
+                                 <Font name="Arial" size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets bottom="5.0" />
+                              </padding>
+                              <HBox.margin>
+                                 <Insets left="10.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button fx:id="driverLicenseNumberSearch" onAction="#handleDLNumberSearchtButton" prefWidth="100.0" styleClass="btn-search" stylesheets="@styling.css" text="Search" textFill="WHITE">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                        </children>
+                     </HBox>
+                     <Label text="Vehicle Identification Number">
+                        <font>
+                           <Font name="Arial" size="16.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="vehicleIdTextField" promptText="2T2K1E56A12345674">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets left="10.0" />
+                        </VBox.margin>
+                     </TextField>
+                     <HBox prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="vehicleIdErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                              <font>
+                                 <Font name="Arial" size="14.0" />
+                              </font>
+                              <padding>
+                                 <Insets bottom="5.0" />
+                              </padding>
+                              <HBox.margin>
+                                 <Insets left="10.0" />
+                              </HBox.margin>
+                           </Label>
+                        </children>
+                     </HBox>
+                     <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                           <Button fx:id="vehicleIdSearch" onAction="#handleVINSearchButton" prefWidth="100.0" styleClass="btn-search" stylesheets="@styling.css" text="Search" textFill="WHITE">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Button>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+            </children>
+            <padding>
+               <Insets bottom="10.0" />
+            </padding>
+         </HBox>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="480.0" maxWidth="720.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcrs.NewDriverController">
+
+                      <Label alignment="TOP_LEFT" text="New Driver">
+      <font>
+         <Font name="Arial Bold" size="22.0" />
+      </font>
+      <padding>
+         <Insets top="20.0" />
+      </padding>
+   </Label>
+   <HBox alignment="CENTER" prefHeight="413.0" prefWidth="720.0" spacing="10.0">
+      <children>
+         <VBox prefWidth="288.0">
+            <children>
+               <Label fx:id="dateTimeLabel" prefHeight="41.0" prefWidth="137.0" text="Driver Information">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <Label text="Driver's License Number">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="driverLicenseNumberTextField" promptText="1234-1234-1234-1234">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="driverLicenseNumberErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+               </Label>
+               <Label text="First Name">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="firstNameTextField" promptText="John">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="firstNameErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Label text="Last Name">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="lastNameTextField" promptText="Doe">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="lastNameErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Label text="Date of Birth">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <DatePicker fx:id="dOBDatePicker" prefWidth="290.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </DatePicker>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_LEFT" prefHeight="552.0" prefWidth="405.0">
+            <children>
+               <Label text="Notes">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="notesTextArea">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </TextArea>
+               <Pane nodeOrientation="RIGHT_TO_LEFT">
+                  <children>
+                     <Button fx:id="submitButton" onAction="#handleSubmitButton" prefWidth="100.0" styleClass="btn-search" stylesheets="@styling.css" text="Submit" textFill="WHITE">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Pane>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+
+      </VBox>

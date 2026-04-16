@@ -1,0 +1,6 @@
+Id,Type,Officer,DL Number,VIN,Date,Fine Amount,Payment Status,Traffic School,Notes
+1,Speeding,John Smith,1244-5123-6543-6543,1GNSKAKC9FR288113,2022-01-15T09:30,150,Paid,N/A,Driver was going 75 mph in a 55 mph zone.
+2,Seat Belt Violation,Jane Doe,5432-5432-7457-6345,1FMJU2A57CEF33227,2022-02-03T11:15,50,Unpaid,N/A,Driver was not wearing a seat belt.
+3,Running Red Light,Mike Johnson,4321-5133-5432-5432,1N4AA6AP3HC387645,2022-03-22T18:45,200,Unpaid,Attended,Driver ran a red light and almost caused an accident.
+4,Expired Registration,Sarah Lee,6356-6543-6453-6543,2T2HK31U48C065630,2022-04-11T14:00,75,Paid,N/A,Vehicle had expired registration tags.
+5,No Proof of Insurance,David Kim,4321-5133-5432-5432,3FA6P0D92JR202122,2022-05-19T10:30,100,Unpaid,N/A,Driver was unable to provide proof of insurance.

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="480.0" maxWidth="720.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcrs.NewVehicleController">
+
+                      <Label alignment="TOP_LEFT" text="New Vehicle">
+      <font>
+         <Font name="Arial Bold" size="22.0" />
+      </font>
+      <padding>
+         <Insets top="20.0" />
+      </padding>
+   </Label>
+   <HBox alignment="CENTER" prefHeight="413.0" prefWidth="720.0" spacing="10.0">
+      <children>
+         <VBox prefWidth="288.0">
+            <children>
+               <Label fx:id="dateTimeLabel" prefHeight="41.0" prefWidth="137.0" text="Vehicle Information">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <Label text="Vehicle Make">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="makeTextField" promptText="Toyota">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="makeErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Label text="Vehicle Model">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="modelTextField" promptText="Camry">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="modelErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Label text="Vehicle Year">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="yearTextField" promptText="2021">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="yearErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+               </Label>
+               <Label text="Vehicle Identification Number">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="vinTextField" promptText="2T2K1E56A12345674">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label fx:id="vinErrorLabel" text="*Invalid Input" textFill="RED" visible="false">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+               </Label>
+            </children>
+         </VBox>
+         <VBox alignment="BOTTOM_LEFT" prefHeight="552.0" prefWidth="405.0">
+            <children>
+               <Label text="Notes">
+                  <font>
+                     <Font name="Arial" size="16.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="notesTextArea">
+                  <font>
+                     <Font name="Arial" size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </TextArea>
+               <Pane nodeOrientation="RIGHT_TO_LEFT">
+                  <children>
+                     <Button fx:id="submitButton" onAction="#handleSubmitButton" prefWidth="100.0" styleClass="btn-search" stylesheets="@styling.css" text="Submit" textFill="WHITE">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Pane>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+
+      </VBox>
